@@ -141,8 +141,15 @@
     border-color: var(--color-border);
   }
 
-  body {
+  html, body {
+    font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
     background-color: var(--color-background);
     color: var(--color-foreground);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .font-serif {
+    font-family: "Fraunces", ui-serif, Georgia, serif;
+    font-feature-settings: "ss01";
   }
 }
