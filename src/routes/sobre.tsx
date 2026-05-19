@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import adillaPhoto from "@/assets/adilla.png";
+import adillaPhoto from "@/assets/adilla.jpeg";
 import { Mail, ArrowRight, Heart, Compass, Lightbulb, Target } from "lucide-react";
 
 export const Route = createFileRoute("/sobre")({
