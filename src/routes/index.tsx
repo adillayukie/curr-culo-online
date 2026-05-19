@@ -1,21 +1,22 @@
-import { createFileRoute } from "@tanstack/react-router";
-import adillaPhoto from "@/assets/adilla.jpeg";
-import { Mail, Phone, Linkedin, MapPin, ArrowUpRight, Sparkles } from "lucide-react";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import adillaPhoto from "@/assets/adilla.png";
+import { Mail, Linkedin, MapPin, ArrowUpRight, Sparkles, ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   component: Resume,
   head: () => ({
     meta: [
-      { title: "Adilla Yukie Teixeira — Product Marketing & Growth" },
+      { title: "Adilla Teixeira — Product Manager & Growth" },
       {
         name: "description",
         content:
-          "Currículo de Adilla Yukie Teixeira — Product Marketing Manager focada em go-to-market, posicionamento e crescimento orientado a dados.",
+          "Currículo online de Adilla Teixeira — Product Manager especialista em Growth, Go-to-Market e otimização de funil com impacto direto em receita.",
       },
-      { property: "og:title", content: "Adilla Yukie Teixeira — Product Marketing" },
+      { property: "og:title", content: "Adilla Teixeira — Product Manager & Growth" },
       {
         property: "og:description",
-        content: "PMM com foco em GTM, posicionamento e growth orientado a dados.",
+        content:
+          "PM e PMM focada em GTM, posicionamento e crescimento orientado a produto.",
       },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -24,27 +25,25 @@ export const Route = createFileRoute("/")({
 
 const experiences = [
   {
-    role: "Analista Sênior de Produto Digital (PMM)",
+    role: "Analista Sr. de Produto Digital",
     company: "Grupo Boticário",
-    period: "06/2022 — 11/2025",
+    period: "07/2022 — 11/2025",
     bullets: [
-      "Liderei o GTM do mapa “Guardiões do Futuro” no Fortnite, conectando proposta de valor, narrativa e canais — alcançando 3x a média de jogadores em iniciativas institucionais.",
-      "Estruturei a narrativa de valor do produto em parceria com Produto e Marketing, garantindo consistência entre experiência, comunicação e objetivos de negócio.",
-      "Defini métricas de sucesso e acompanhei alcance, engajamento e conversão, otimizando eficiência de mídia e captura de valor.",
-      "Atuei como ponte entre Produto, Martech e parceiros para alinhar entregas, narrativa e estratégia de crescimento.",
-      "Gerenciei roadmap e orçamento (R$ 200k), priorizando iniciativas com maior impacto para usuário e negócio.",
+      "Liderei o go-to-market de uma iniciativa digital dentro do ecossistema Fortnite, estruturando posicionamento, narrativa e aquisição — resultado 3x superior ao benchmark interno.",
+      "Estruturei a comunicação e proposta de valor do produto, garantindo consistência entre experiência, campanha e objetivos de negócio.",
+      "Direcionei decisões com base em métricas de aquisição, engajamento e conversão, otimizando eficiência de mídia e impacto.",
+      "Atuei como elo entre Produto, Martech e parceiros, garantindo execução alinhada à estratégia de crescimento.",
     ],
   },
   {
     role: "Product Marketing Manager (PMM)",
-    company: "Meu Pet Club | Grupo SVC",
+    company: "Meu Pet Club",
     period: "10/2020 — 06/2022",
     bullets: [
-      "Liderei estratégias de GTM para produtos B2B e B2C, definindo posicionamento, proposta de valor e métricas (CAC, LTV, conversão).",
-      "Conduzi discovery de mercado e comportamento do usuário, orientando aquisição, comunicação e evolução do produto.",
-      "Ativei o blog como principal canal de aquisição qualificada: +346% de tráfego orgânico e -20% no CAC B2B.",
-      "Otimizei o funil via experimentação contínua (A/B, conteúdo e canais), aumentando previsibilidade de crescimento.",
-      "Estruturei narrativa e materiais de sales enablement, aumentando consistência e eficiência na conversão.",
+      "Estruturei GTM completo (B2B e B2C), definindo ICP, posicionamento e estratégia de aquisição.",
+      "Reposicionei canais e narrativa, reduzindo CAC B2B em 20%.",
+      "Liderei estratégia de conteúdo e SEO, gerando +346% de crescimento de tráfego orgânico.",
+      "Conectei Produto, Vendas e CS para aumentar eficiência comercial e geração de receita.",
     ],
   },
   {
@@ -52,29 +51,49 @@ const experiences = [
     company: "Grupo SVC",
     period: "09/2019 — 10/2020",
     bullets: [
-      "Liderei o reposicionamento estratégico do Meu Pet Club, definindo ICP, personas e narrativa de valor.",
-      "Estruturei o funil de demanda (Inbound + Outbound), conectando marketing e vendas para aumentar conversão.",
-      "Desenvolvi fluxos de nutrição e automação, melhorando a qualidade das oportunidades para SDRs.",
+      "Liderei reposicionamento de produto e definição de ICP.",
+      "Estruturei aquisição (inbound + outbound) integrada ao time comercial.",
+      "Implementei automação e qualificação de leads, aumentando conversão e previsibilidade.",
+    ],
+  },
+  {
+    role: "Analista de Marketing",
+    company: "LS Sistema de Ensino",
+    period: "12/2017 — 09/2019",
+    bullets: [
+      "Gestão de redes sociais e canais digitais, com estratégia de conteúdo para campanhas sazonais e AON.",
+      "Mensuração e análise do desempenho de marketing digital.",
+      "Criação de conteúdo, atendimento e relatórios de Social Media.",
+    ],
+  },
+  {
+    role: "Analista de Marketing",
+    company: "Weebo Inovação e Tecnologia",
+    period: "02/2016 — 04/2017",
+    bullets: [
+      "Elaboração de peças gráficas e digitais.",
+      "Planejamento de redes sociais e produção de conteúdo.",
     ],
   },
 ];
 
 const skills = [
-  "Go-to-Market & Lançamentos",
-  "Posicionamento & Mensagens",
-  "Adoção & Otimização de Funil",
-  "Discovery de Mercado",
-  "Growth & Experimentação (A/B)",
-  "Influência em Roadmap",
-  "Análise de Dados (CAC, LTV, Conversão)",
-  "Alinhamento Cross-functional",
+  "Product Management",
+  "Growth Marketing",
+  "Product Roadmap",
+  "Go-to-Market (GTM)",
+  "Posicionamento & Narrativa",
+  "Otimização de Funil",
+  "UX/UI",
+  "Data Analytics",
+  "Agile",
 ];
 
 const highlights = [
-  { value: "3x", label: "jogadores acima da média em GTM Fortnite" },
-  { value: "+346%", label: "tráfego orgânico via canal de blog" },
+  { value: "3x", label: "performance em lançamento digital (gaming)" },
+  { value: "+346%", label: "crescimento de tráfego orgânico" },
   { value: "-20%", label: "redução de CAC B2B" },
-  { value: "R$ 200k", label: "orçamento de roadmap gerenciado" },
+  { value: "B2B + B2C", label: "estratégias de GTM end-to-end" },
 ];
 
 function Resume() {
@@ -94,17 +113,17 @@ function Resume() {
           <div className="flex flex-col justify-center">
             <span className="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-border bg-card/70 px-3 py-1 text-xs uppercase tracking-[0.18em] text-muted-foreground backdrop-blur">
               <Sparkles className="h-3.5 w-3.5 text-primary" />
-              Product Marketing · Go-to-Market · Growth
+              Product · Growth · Go-to-Market
             </span>
             <h1 className="font-serif text-5xl leading-[1.05] tracking-tight md:text-7xl">
               Adilla
               <br />
-              <span className="italic text-primary">Yukie Teixeira</span>
+              <span className="italic text-primary">Teixeira</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg text-muted-foreground">
-              Traduzo capacidades de produto em propostas de valor claras,
-              conectando produto, marketing e receita para gerar crescimento
-              previsível e orientado a dados.
+              Especialista em crescimento orientado a produto, atuando na
+              interseção entre posicionamento, distribuição e conversão — com
+              impacto direto em receita.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
@@ -122,9 +141,14 @@ function Resume() {
                 <Linkedin className="h-4 w-4" /> LinkedIn
                 <ArrowUpRight className="h-4 w-4" />
               </a>
+              <Link
+                to="/sobre"
+                className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-3 text-sm font-medium text-foreground transition hover:bg-secondary"
+              >
+                Sobre mim <ArrowRight className="h-4 w-4" />
+              </Link>
             </div>
             <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
-              <li className="inline-flex items-center gap-2"><Phone className="h-4 w-4 text-primary" /> (41) 9.9970.4287</li>
               <li className="inline-flex items-center gap-2"><Mail className="h-4 w-4 text-primary" /> adillayukie@hotmail.com</li>
               <li className="inline-flex items-center gap-2"><MapPin className="h-4 w-4 text-primary" /> São Paulo, SP</li>
             </ul>
@@ -133,18 +157,21 @@ function Resume() {
           <div className="relative mx-auto md:mx-0">
             <div
               aria-hidden
-              className="absolute -inset-4 -z-10 rounded-[2rem] bg-secondary"
-              style={{ transform: "rotate(-3deg)" }}
+              className="absolute inset-0 -z-10 rounded-full"
+              style={{
+                background:
+                  "radial-gradient(closest-side, var(--mint) 0%, color-mix(in oklab, var(--mint) 60%, transparent) 55%, transparent 75%)",
+              }}
             />
             <div
               aria-hidden
-              className="absolute -bottom-4 -right-4 -z-10 h-32 w-32 rounded-full"
+              className="absolute -bottom-6 -right-2 -z-10 h-32 w-32 rounded-full opacity-80 blur-xl"
               style={{ background: "var(--coral)" }}
             />
             <img
               src={adillaPhoto}
-              alt="Retrato de Adilla Yukie Teixeira"
-              className="relative h-[460px] w-[360px] rounded-[1.75rem] object-cover shadow-xl"
+              alt="Retrato de Adilla Teixeira"
+              className="relative h-[460px] w-auto object-contain"
             />
           </div>
         </div>
@@ -166,21 +193,25 @@ function Resume() {
       <section className="mx-auto max-w-6xl px-6 py-20">
         <div className="grid gap-12 md:grid-cols-[1fr_2fr]">
           <h2 className="font-serif text-3xl tracking-tight md:text-4xl">
-            Sobre <span className="italic text-primary">mim</span>
+            Resumo <span className="italic text-primary">profissional</span>
           </h2>
           <div className="space-y-5 text-lg leading-relaxed text-foreground/80">
             <p>
-              Profissional de Product Marketing com experiência na interseção
-              entre Produto, Marketing e Receita, atuando na construção e
-              evolução de estratégias de go-to-market, posicionamento e
-              crescimento.
+              Lidero estratégias de go-to-market e otimização de funil com foco
+              em impacto direto em receita, conectando comportamento do usuário,
+              narrativa de valor e eficiência de canais.
             </p>
             <p>
-              Traduzo capacidades de produto em propostas de valor claras,
-              otimizo funis de aquisição e conversão e alinho stakeholders para
-              aumentar eficiência e previsibilidade. Atuação orientada a dados,
-              com foco em impacto de negócio.
+              Minha atuação se concentra em identificar e destravar alavancas
+              reais de crescimento — seja via reposicionamento, reestruturação
+              de aquisição ou evolução da proposta de valor.
             </p>
+            <Link
+              to="/sobre"
+              className="inline-flex items-center gap-2 text-primary underline-offset-4 hover:underline"
+            >
+              Conheça mais sobre mim <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
         </div>
       </section>
@@ -189,7 +220,7 @@ function Resume() {
       <section className="border-y border-border bg-secondary/40">
         <div className="mx-auto max-w-6xl px-6 py-20">
           <h2 className="mb-10 font-serif text-3xl tracking-tight md:text-4xl">
-            Competências
+            Principais competências
           </h2>
           <div className="flex flex-wrap gap-3">
             {skills.map((s) => (
@@ -235,7 +266,7 @@ function Resume() {
         </div>
       </section>
 
-      {/* EDUCATION + LANG + COURSES */}
+      {/* EDUCATION + LANG + CERTS */}
       <section className="border-t border-border bg-card">
         <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-3">
           <div>
@@ -246,22 +277,24 @@ function Resume() {
                 <p className="text-muted-foreground">ESPM · 2020–2022</p>
               </li>
               <li>
-                <p className="font-medium">Bacharel em Design Digital</p>
+                <p className="font-medium">Bacharelado em Design Digital</p>
                 <p className="text-muted-foreground">PUC-PR · 2012–2016</p>
               </li>
             </ul>
           </div>
           <div>
-            <h3 className="mb-5 font-serif text-2xl">Idioma</h3>
-            <p className="text-sm text-foreground/85">Inglês — Avançado</p>
+            <h3 className="mb-5 font-serif text-2xl">Idiomas</h3>
+            <ul className="space-y-2 text-sm text-foreground/85">
+              <li>Português — Nativo</li>
+              <li>Inglês — Profissional</li>
+            </ul>
           </div>
           <div>
-            <h3 className="mb-5 font-serif text-2xl">Cursos</h3>
-            <ul className="space-y-3 text-sm text-foreground/85">
-              <li>Product Management — PM3 · 2023</li>
-              <li>Customer Experience — Sandbox · 2021</li>
-              <li>Google Data Studio — IBPAD · 2020</li>
-              <li>Inbound Marketing — HubSpot Academy · 2017</li>
+            <h3 className="mb-5 font-serif text-2xl">Certificações</h3>
+            <ul className="space-y-2 text-sm text-foreground/85">
+              <li>Adobe Illustrator</li>
+              <li>Adobe InDesign</li>
+              <li>Certificação Runrun.it</li>
             </ul>
           </div>
         </div>
@@ -283,7 +316,7 @@ function Resume() {
             <span className="italic text-primary"> capítulo de growth?</span>
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-muted-foreground">
-            Aberta para conversas sobre Product Marketing, GTM e estratégias de
+            Aberta para conversas sobre Product Management, GTM e estratégias de
             crescimento.
           </p>
           <a
@@ -296,7 +329,7 @@ function Resume() {
       </section>
 
       <footer className="border-t border-border py-8 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} Adilla Yukie Teixeira
+        © {new Date().getFullYear()} Adilla Teixeira
       </footer>
     </div>
   );
