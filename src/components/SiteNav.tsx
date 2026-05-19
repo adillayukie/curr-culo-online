@@ -5,7 +5,7 @@ export function SiteNav() {
     <nav className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link to="/" className="font-serif text-lg tracking-tight">
-          Adilla <span className="italic text-primary">Yukie</span>
+          Adilla <span className="italic text-primary">Teixeira</span>
         </Link>
         <div className="flex items-center gap-6 text-sm">
           <Link
