@@ -109,6 +109,15 @@ function Resume() {
               "radial-gradient(120% 100% at 95% 60%, #DFFFD6 0%, #c8dcb8 35%, #9fb393 70%, #3a3f3a 100%)",
           }}
         />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 -z-10 opacity-40"
+          style={{
+            backgroundImage:
+              "radial-gradient(rgba(255,255,255,0.55) 1px, transparent 1px)",
+            backgroundSize: "22px 22px",
+          }}
+        />
         <div className="mx-auto grid max-w-6xl gap-12 px-6 py-16 md:grid-cols-[1.2fr_1fr] md:py-24">
           <div className="flex flex-col justify-center">
             <span className="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-border bg-card/70 px-3 py-1 text-xs uppercase tracking-[0.18em] text-muted-foreground backdrop-blur">
