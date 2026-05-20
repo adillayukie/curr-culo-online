@@ -146,6 +146,21 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     -webkit-font-smoothing: antialiased;
+    background-image: radial-gradient(
+      color-mix(in oklab, var(--color-foreground) 18%, transparent) 1px,
+      transparent 1px
+    );
+    background-size: 22px 22px;
+    background-attachment: fixed;
+  }
+
+  .bg-card,
+  .bg-secondary\/40 {
+    background-image: radial-gradient(
+      color-mix(in oklab, var(--color-foreground) 18%, transparent) 1px,
+      transparent 1px
+    );
+    background-size: 22px 22px;
   }
 
   .font-serif {
