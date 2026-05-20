@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import adillaPhoto from "@/assets/adilla.jpeg";
+import adillaPhoto from "@/assets/adilla.png";
 import { Mail, Linkedin, MapPin, ArrowUpRight, Sparkles, ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -154,26 +154,31 @@ function Resume() {
             </ul>
           </div>
 
-          <div className="relative mx-auto md:mx-0">
+          <div className="relative mx-auto flex items-end justify-center md:mx-0">
             <div
-              aria-hidden
-              className="absolute inset-0 -z-10 rounded-full"
+              className="relative aspect-square w-[320px] rounded-full md:w-[420px]"
               style={{
                 background:
-                  "radial-gradient(closest-side, var(--mint) 0%, color-mix(in oklab, var(--mint) 60%, transparent) 55%, transparent 75%)",
+                  "linear-gradient(110deg, #9fb393 0%, #c8dcb8 50%, #DFFFD6 100%)",
               }}
-            />
-            <div
-              aria-hidden
-              className="absolute -bottom-6 -right-2 -z-10 h-32 w-32 rounded-full opacity-80 blur-xl"
-              style={{ background: "var(--coral)" }}
-            />
-            <img
-              src={adillaPhoto}
-              alt="Retrato de Adilla Teixeira"
-              className="relative h-[460px] w-auto object-contain"
-            />
+            >
+              <div
+                aria-hidden
+                className="absolute inset-0 rounded-full"
+                style={{
+                  background:
+                    "radial-gradient(55% 50% at 72% 78%, rgba(255,255,255,0.5) 0%, transparent 70%)",
+                }}
+              />
+              <img
+                src={adillaPhoto}
+                alt="Retrato de Adilla Teixeira"
+                className="absolute bottom-0 left-1/2 h-[128%] w-auto -translate-x-1/2 object-contain"
+              />
+            </div>
           </div>
+
+
         </div>
       </header>
 
