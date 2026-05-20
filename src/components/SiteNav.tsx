@@ -37,7 +37,7 @@ export function SiteNav() {
   }, [activeIndex]);
 
   return (
-    <nav className="fixed bottom-4 left-1/2 z-50 w-full max-w-sm -translate-x-1/2 px-3">
+    <nav className="fixed top-4 right-4 z-50 w-auto max-w-sm px-0">
       <div
         ref={containerRef}
         className="relative flex items-center justify-between rounded-full border border-border bg-card/90 px-1 py-2 shadow-xl backdrop-blur"
