@@ -175,13 +175,13 @@ function Resume() {
                   src={adillaPhoto}
                   alt=""
                   aria-hidden
-                  className="absolute bottom-0 left-1/2 h-[128%] w-auto max-w-none -translate-x-1/2 object-contain"
+                  className="absolute bottom-0 left-1/2 h-[112%] w-auto max-w-none -translate-x-1/2 object-contain"
                 />
               </div>
               <img
                 src={adillaPhoto}
                 alt="Retrato de Adilla Teixeira"
-                className="absolute bottom-0 left-1/2 h-[128%] w-auto max-w-none -translate-x-1/2 object-contain"
+                className="absolute bottom-0 left-1/2 h-[112%] w-auto max-w-none -translate-x-1/2 object-contain"
                 style={{
                   WebkitMaskImage:
                     "linear-gradient(to bottom, black 0%, black 21.8%, transparent 21.8%)",
