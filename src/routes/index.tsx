@@ -102,20 +102,14 @@ function Resume() {
     <div className="min-h-screen bg-background text-foreground">
       {/* HERO */}
       <header className="relative overflow-hidden border-b border-border">
+        <div aria-hidden className="absolute inset-0 -z-10 bg-slate-950" />
         <div
           aria-hidden
-          className="absolute inset-0 -z-10"
-          style={{ background: "#15182a" }}
+          className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_560px_at_50%_200px,#f97316,transparent)]"
         />
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 -z-10"
-          style={{
-            backgroundImage:
-              "radial-gradient(rgba(255,255,255,0.35) 1.2px, transparent 1.2px)",
-            backgroundSize: "48px 48px",
-          }}
-        />
+        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+          <Noise patternRefreshInterval={2} patternAlpha={18} />
+        </div>
 
         <div className="mx-auto grid max-w-6xl gap-12 px-6 py-16 md:grid-cols-[1.2fr_1fr] md:py-24">
           <div className="flex flex-col justify-center">
