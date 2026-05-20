@@ -156,10 +156,10 @@ function Resume() {
 
           <div className="relative mx-auto flex items-end justify-center md:mx-0">
             <div
-              className="relative aspect-square w-[340px] overflow-visible rounded-full md:w-[420px]"
+              className="relative aspect-square w-[320px] rounded-full md:w-[420px]"
               style={{
                 background:
-                  "linear-gradient(110deg, #b8c9ad 0%, #cfe8c4 55%, #DFFFD6 100%)",
+                  "linear-gradient(110deg, #9fb393 0%, #c8dcb8 50%, #DFFFD6 100%)",
               }}
             >
               <div
@@ -167,23 +167,17 @@ function Resume() {
                 className="absolute inset-0 rounded-full"
                 style={{
                   background:
-                    "radial-gradient(60% 55% at 70% 75%, rgba(255,255,255,0.55) 0%, transparent 70%)",
+                    "radial-gradient(55% 50% at 72% 78%, rgba(255,255,255,0.5) 0%, transparent 70%)",
                 }}
               />
-              <div className="absolute inset-0 overflow-hidden rounded-full" />
               <img
                 src={adillaPhoto}
                 alt="Retrato de Adilla Teixeira"
-                className="absolute bottom-0 left-1/2 h-[125%] w-auto -translate-x-1/2 object-contain"
-                style={{
-                  clipPath: "inset(0 0 0 0)",
-                  WebkitMaskImage:
-                    "radial-gradient(circle at 50% 60%, black 58%, transparent 58.2%), linear-gradient(black, black)",
-                  WebkitMaskComposite: "source-over",
-                }}
+                className="absolute bottom-0 left-1/2 h-[128%] w-auto -translate-x-1/2 object-contain"
               />
             </div>
           </div>
+
 
         </div>
       </header>
