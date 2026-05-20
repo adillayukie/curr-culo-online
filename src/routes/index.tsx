@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import adillaPhoto from "@/assets/adilla.png";
 import { Mail, Linkedin, MapPin, ArrowUpRight, Sparkles, ArrowRight } from "lucide-react";
+import { Noise } from "@/components/Noise";
 
 export const Route = createFileRoute("/")({
   component: Resume,
