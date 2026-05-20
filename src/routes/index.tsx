@@ -154,26 +154,37 @@ function Resume() {
             </ul>
           </div>
 
-          <div className="relative mx-auto md:mx-0">
+          <div className="relative mx-auto flex items-end justify-center md:mx-0">
             <div
-              aria-hidden
-              className="absolute inset-0 -z-10 rounded-full"
+              className="relative aspect-square w-[340px] overflow-visible rounded-full md:w-[420px]"
               style={{
                 background:
-                  "radial-gradient(closest-side, var(--mint) 0%, color-mix(in oklab, var(--mint) 60%, transparent) 55%, transparent 75%)",
+                  "linear-gradient(110deg, #b8c9ad 0%, #cfe8c4 55%, #DFFFD6 100%)",
               }}
-            />
-            <div
-              aria-hidden
-              className="absolute -bottom-6 -right-2 -z-10 h-32 w-32 rounded-full opacity-80 blur-xl"
-              style={{ background: "var(--coral)" }}
-            />
-            <img
-              src={adillaPhoto}
-              alt="Retrato de Adilla Teixeira"
-              className="relative h-[460px] w-auto object-contain"
-            />
+            >
+              <div
+                aria-hidden
+                className="absolute inset-0 rounded-full"
+                style={{
+                  background:
+                    "radial-gradient(60% 55% at 70% 75%, rgba(255,255,255,0.55) 0%, transparent 70%)",
+                }}
+              />
+              <div className="absolute inset-0 overflow-hidden rounded-full" />
+              <img
+                src={adillaPhoto}
+                alt="Retrato de Adilla Teixeira"
+                className="absolute bottom-0 left-1/2 h-[125%] w-auto -translate-x-1/2 object-contain"
+                style={{
+                  clipPath: "inset(0 0 0 0)",
+                  WebkitMaskImage:
+                    "radial-gradient(circle at 50% 60%, black 58%, transparent 58.2%), linear-gradient(black, black)",
+                  WebkitMaskComposite: "source-over",
+                }}
+              />
+            </div>
           </div>
+
         </div>
       </header>
 
