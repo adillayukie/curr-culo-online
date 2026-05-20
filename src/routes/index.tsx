@@ -102,16 +102,16 @@ function Resume() {
     <div className="min-h-screen bg-background text-foreground">
       {/* HERO */}
       <header className="relative overflow-hidden border-b border-border">
-        <div aria-hidden className="absolute inset-0 -z-10 bg-slate-950" />
+        <div aria-hidden className="absolute inset-0 bg-slate-950" />
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_560px_at_50%_200px,#f97316,transparent)]"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_560px_at_50%_200px,#f97316,transparent)]"
         />
-        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+        <div aria-hidden className="pointer-events-none absolute inset-0">
           <Noise patternRefreshInterval={2} patternAlpha={18} />
         </div>
 
-        <div className="mx-auto grid max-w-6xl gap-12 px-6 py-16 md:grid-cols-[1.2fr_1fr] md:py-24">
+        <div className="relative z-10 mx-auto grid max-w-6xl gap-12 px-6 py-16 md:grid-cols-[1.2fr_1fr] md:py-24">
           <div className="flex flex-col justify-center">
             <h1 className="font-serif text-5xl leading-[1.05] tracking-tight md:text-7xl">
               Adilla
