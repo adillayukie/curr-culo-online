@@ -170,11 +170,26 @@ function Resume() {
                     "radial-gradient(55% 50% at 72% 78%, rgba(255,255,255,0.5) 0%, transparent 70%)",
                 }}
               />
+              <div className="absolute inset-0 overflow-hidden rounded-full">
+                <img
+                  src={adillaPhoto}
+                  alt=""
+                  aria-hidden
+                  className="absolute bottom-0 left-1/2 h-[128%] w-auto max-w-none -translate-x-1/2 object-contain"
+                />
+              </div>
               <img
                 src={adillaPhoto}
                 alt="Retrato de Adilla Teixeira"
-                className="absolute bottom-0 left-1/2 h-[128%] w-auto -translate-x-1/2 object-contain"
+                className="absolute bottom-0 left-1/2 h-[128%] w-auto max-w-none -translate-x-1/2 object-contain"
+                style={{
+                  WebkitMaskImage:
+                    "linear-gradient(to bottom, black 0%, black 21.8%, transparent 21.8%)",
+                  maskImage:
+                    "linear-gradient(to bottom, black 0%, black 21.8%, transparent 21.8%)",
+                }}
               />
+
             </div>
           </div>
 
