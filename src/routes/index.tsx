@@ -106,7 +106,7 @@ function Resume() {
           className="absolute inset-0 -z-10"
           style={{
             background:
-              "radial-gradient(120% 80% at 65% 100%, #DFFFD6 0%, #cfe8c4 45%, #b8c9ad 100%)",
+              "radial-gradient(120% 100% at 95% 60%, #DFFFD6 0%, #c8dcb8 35%, #9fb393 70%, #3a3f3a 100%)",
           }}
         />
         <div className="mx-auto grid max-w-6xl gap-12 px-6 py-16 md:grid-cols-[1.2fr_1fr] md:py-24">
