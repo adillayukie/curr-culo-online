@@ -123,11 +123,10 @@ function Resume() {
               Product · Growth · Go-to-Market
             </span>
 
-
             <p className="mt-6 max-w-xl text-lg text-muted-foreground">
-              Especialista em crescimento orientado a produto, atuando na
-              interseção entre posicionamento, distribuição e conversão — com
-              impacto direto em receita.
+              Pode me chamar de Adi. Atuo conectando estratégia, produto e
+              comunicação para transformar comportamento de usuário em
+              crescimento real para negócios digitais.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
