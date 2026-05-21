@@ -240,7 +240,14 @@ function Resume() {
       </section>
 
       {/* SKILLS */}
-      <section className="border-y border-border">
+      <section
+        className="border-y border-border"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle, color-mix(in oklab, var(--foreground) 20%, transparent) 1px, transparent 1px)",
+          backgroundSize: "22px 22px",
+        }}
+      >
         <div className="mx-auto max-w-6xl px-6 py-20">
           <h2 className="mb-10 font-serif text-3xl tracking-tight md:text-4xl">
             Principais competências
