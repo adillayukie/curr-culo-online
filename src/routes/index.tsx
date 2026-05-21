@@ -240,7 +240,7 @@ function Resume() {
       </section>
 
       {/* SKILLS */}
-      <section className="border-y border-border bg-secondary">
+      <section className="border-y border-border">
         <div className="mx-auto max-w-6xl px-6 py-20">
           <h2 className="mb-10 font-serif text-3xl tracking-tight md:text-4xl">
             Principais competências
