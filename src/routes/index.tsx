@@ -243,8 +243,10 @@ function Resume() {
       <section
         className="border-y border-border"
         style={{
+          backgroundColor:
+            "color-mix(in oklab, var(--background) 92%, var(--primary) 8%)",
           backgroundImage:
-            "radial-gradient(circle, color-mix(in oklab, var(--foreground) 20%, transparent) 1px, transparent 1px)",
+            "radial-gradient(circle, color-mix(in oklab, var(--primary) 40%, transparent) 1px, transparent 1px)",
           backgroundSize: "22px 22px",
         }}
       >
