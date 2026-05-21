@@ -102,10 +102,10 @@ function Resume() {
     <div className="min-h-screen bg-background text-foreground">
       {/* HERO */}
       <header className="relative overflow-hidden border-b border-border">
-        <div aria-hidden className="absolute inset-0 bg-slate-950" />
+        <div aria-hidden className="absolute inset-0 bg-background" />
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_560px_at_50%_200px,#f97316,transparent)]"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_560px_at_50%_200px,#fdba74,transparent)]"
         />
         <div aria-hidden className="pointer-events-none absolute inset-0">
           <Noise patternRefreshInterval={2} patternAlpha={18} />
