@@ -109,7 +109,7 @@ function SobreMim() {
         <div className="space-y-6 text-lg leading-relaxed text-foreground/85">
           <p>
             Sou formada em Design Digital (PUC-PR), tenho background técnico em
-            Informática e MBA em Marketing. Mas o que mais gosto nessa
+            Informática e MBA em Marketing (ESPM). Mas o que mais gosto nessa
             combinação é a capacidade de conectar esses mundos: vejo produto
             como design, tecnologia como ferramenta de estratégia, e
             comunicação como a ponte entre o que é complexo e o que faz sentido
