@@ -60,7 +60,7 @@ function SobreMim() {
       <header className="relative overflow-hidden border-b border-border">
         <div
           aria-hidden
-          className="absolute inset-0 -z-10"
+          className="absolute inset-0"
           style={{
             backgroundColor: "#ffffff",
             backgroundImage:
@@ -68,7 +68,11 @@ function SobreMim() {
             backgroundSize: "44px 44px",
           }}
         />
-        <div className="mx-auto grid max-w-6xl gap-12 px-6 py-16 md:grid-cols-[1fr_1.2fr] md:py-24">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_560px_at_50%_200px,#fdba74,transparent)]"
+        />
+        <div className="relative mx-auto grid max-w-6xl gap-12 px-6 py-16 md:grid-cols-[1fr_1.2fr] md:py-24">
           <div className="relative order-2 mx-auto md:order-1 md:mx-0">
             <div
               aria-hidden
