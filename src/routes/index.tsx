@@ -102,16 +102,7 @@ function Resume() {
     <div className="min-h-screen bg-background text-foreground">
       {/* HERO */}
       <header className="relative overflow-hidden border-b border-border">
-        <div
-          aria-hidden
-          className="absolute inset-0"
-          style={{
-            backgroundColor: "#ffffff",
-            backgroundImage:
-              "radial-gradient(circle, rgba(0,0,0,0.18) 1px, transparent 1px)",
-            backgroundSize: "44px 44px",
-          }}
-        />
+        <div aria-hidden className="absolute inset-0 bg-background" />
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_560px_at_50%_200px,#fdba74,transparent)]"
