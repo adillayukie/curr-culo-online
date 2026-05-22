@@ -62,10 +62,8 @@ function SobreMim() {
           aria-hidden
           className="absolute inset-0 -z-10"
           style={{
-            backgroundColor: "#ffffff",
-            backgroundImage:
-              "radial-gradient(circle, rgba(0,0,0,0.18) 1px, transparent 1px)",
-            backgroundSize: "44px 44px",
+            background:
+              "radial-gradient(50% 60% at 20% 10%, var(--mint) 0%, transparent 60%), radial-gradient(40% 40% at 90% 80%, color-mix(in oklab, var(--coral) 25%, transparent) 0%, transparent 70%)",
           }}
         />
         <div className="mx-auto grid max-w-6xl gap-12 px-6 py-16 md:grid-cols-[1fr_1.2fr] md:py-24">
