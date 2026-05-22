@@ -1,6 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import adillaPhoto from "@/assets/adilla.jpeg";
-import { Mail, ArrowRight, Heart, Compass, Lightbulb, Target } from "lucide-react";
+import {
+  Mail,
+  ArrowRight,
+  Search,
+  Sparkles,
+  Layers,
+  Wind,
+} from "lucide-react";
 
 export const Route = createFileRoute("/sobre")({
   component: SobreMim,
@@ -10,39 +17,39 @@ export const Route = createFileRoute("/sobre")({
       {
         name: "description",
         content:
-          "Conheça Adilla Teixeira: trajetória, princípios e o que move uma Product Manager focada em crescimento orientado a produto.",
+          "Conheça Adi: design, tecnologia e comunicação como ferramentas para construir produtos que fazem sentido para as pessoas.",
       },
       { property: "og:title", content: "Sobre mim — Adilla Teixeira" },
       {
         property: "og:description",
         content:
-          "Trajetória, princípios e o que move uma PM focada em crescimento.",
+          "Design, tecnologia e comunicação como ferramentas para construir produtos que fazem sentido.",
       },
     ],
     links: [{ rel: "canonical", href: "/sobre" }],
   }),
 });
 
-const principles = [
+const ways = [
   {
-    icon: Compass,
-    title: "Clareza antes de velocidade",
-    text: "Crescimento sustentável nasce de um posicionamento claro. Antes de escalar, alinho narrativa, ICP e proposta de valor.",
+    icon: Search,
+    title: "Questiono complexidade para otimizá-la",
+    text: "Não para complicar mais, mas para encontrar o caminho mais simples.",
   },
   {
-    icon: Target,
-    title: "Decisões orientadas a dados",
-    text: "Cada hipótese vira experimento. Cada experimento vira aprendizado. Cada aprendizado vira alavanca de receita.",
+    icon: Sparkles,
+    title: "Aprendo rápido temas novos",
+    text: "Porque começo com curiosidade, não com medo.",
   },
   {
-    icon: Lightbulb,
-    title: "Produto + Marketing como um só time",
-    text: "Os melhores resultados acontecem quando Produto, Marketing, Vendas e CS operam com a mesma estratégia.",
+    icon: Layers,
+    title: "Gosto de estruturar o que está solto",
+    text: "Navego a complexidade para que as pessoas ao meu redor não precisem.",
   },
   {
-    icon: Heart,
-    title: "Impacto humano no centro",
-    text: "Por trás de cada métrica há uma pessoa real. Entender comportamento é o que diferencia uma boa entrega de uma entrega memorável.",
+    icon: Wind,
+    title: "Próspero em ambientes em transformação",
+    text: "Incerteza, pra mim, é onde surgem as melhores oportunidades.",
   },
 ];
 
@@ -80,14 +87,15 @@ function SobreMim() {
               Sobre mim
             </span>
             <h1 className="font-serif text-5xl leading-[1.05] tracking-tight md:text-6xl">
-              Mais do que <span className="italic text-primary">métricas</span>,
-              propósito.
+              Prazer, sou <span className="italic text-primary">Adi</span> — e
+              sim, pode me chamar assim mesmo. :)
             </h1>
             <p className="mt-6 text-lg text-muted-foreground">
-              Sou Adilla — paranaense de origem, paulistana por escolha. Comecei
-              minha trajetória em design e comunicação e, ao longo dos anos,
-              encontrei no encontro entre produto, marketing e dados o lugar
-              onde criatividade e estratégia se transformam em crescimento real.
+              Minha trajetória sempre misturou comunicação, tecnologia e
+              criatividade. Tudo começou quando, aos 14 anos, aprendi HTML, CSS
+              e Photoshop para deixar um blog com a minha cara. Sem perceber,
+              aquilo já era meu primeiro projeto de produto: construir algo que
+              as pessoas realmente quisessem usar.
             </p>
           </div>
         </div>
@@ -96,50 +104,41 @@ function SobreMim() {
       {/* STORY */}
       <section className="mx-auto max-w-3xl px-6 py-20">
         <h2 className="mb-10 font-serif text-3xl tracking-tight md:text-4xl">
-          Minha <span className="italic text-primary">trajetória</span>
+          Formação & <span className="italic text-primary">visão</span>
         </h2>
         <div className="space-y-6 text-lg leading-relaxed text-foreground/85">
           <p>
-            Comecei como designer e analista de marketing, criando peças,
-            cuidando de canais e aprendendo, na prática, o que faz uma marca
-            existir na cabeça das pessoas. Em pouco tempo percebi que adorava
-            entender o "porquê" por trás de cada clique, de cada lead e de cada
-            conversa de vendas.
-          </p>
-          <p>
-            Essa curiosidade me levou para o universo de Product Marketing e,
-            depois, Product Management. Atuei em contextos muito diferentes —
-            de educação a SaaS B2B/B2C, passando por gaming dentro de um dos
-            maiores grupos de beleza do país — e em todos eles encontrei o
-            mesmo desafio: traduzir capacidades de produto em valor percebido,
-            e valor percebido em receita.
-          </p>
-          <p>
-            Hoje, atuo na interseção entre estratégia, dados e narrativa. Gosto
-            de problemas ambíguos, de times multidisciplinares e de construir
-            estruturas de crescimento que sobrevivem além de uma boa campanha.
+            Sou formada em Design Digital (PUC-PR), tenho background técnico em
+            Informática e MBA em Marketing. Mas o que mais gosto nessa
+            combinação é a capacidade de conectar esses mundos: vejo produto
+            como design, tecnologia como ferramenta de estratégia, e
+            comunicação como a ponte entre o que é complexo e o que faz sentido
+            para as pessoas.
           </p>
         </div>
       </section>
 
-      {/* PRINCIPLES */}
+      {/* WAYS OF WORKING */}
       <section className="border-y border-border bg-secondary/40">
         <div className="mx-auto max-w-6xl px-6 py-20">
           <h2 className="mb-12 font-serif text-3xl tracking-tight md:text-4xl">
-            Princípios que <span className="italic text-primary">me guiam</span>
+            No dia a dia, me reconheço em{" "}
+            <span className="italic text-primary">
+              quatro jeitos de trabalhar
+            </span>
           </h2>
           <div className="grid gap-6 md:grid-cols-2">
-            {principles.map((p) => (
+            {ways.map((w) => (
               <div
-                key={p.title}
+                key={w.title}
                 className="rounded-2xl border border-border bg-card p-6"
               >
                 <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  <p.icon className="h-5 w-5" />
+                  <w.icon className="h-5 w-5" />
                 </div>
-                <h3 className="font-serif text-xl">{p.title}</h3>
+                <h3 className="font-serif text-xl">{w.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {p.text}
+                  {w.text}
                 </p>
               </div>
             ))}
@@ -155,15 +154,18 @@ function SobreMim() {
           </h2>
           <div className="space-y-5 text-lg leading-relaxed text-foreground/80">
             <p>
-              Sou movida por aprender. Gosto de café bom, de boas conversas e
-              de observar como pequenas mudanças de comportamento transformam
-              produtos inteiros.
+              Nasci em São Paulo, morei muitos anos em Curitiba, e hoje estou
+              de volta a SP. Quando não estou trabalhando, estou em galerias,
+              cinemas ou cafés. Gosto de conversar sobre design, arquitetura,
+              investimentos e produção audiovisual — acredito que tudo é
+              narrativa, e que boas narrativas movem mercados (e pessoas).
             </p>
             <p>
-              Acredito que carreira é construção contínua e que as melhores
-              ideias surgem do encontro entre pessoas diferentes. Estou sempre
-              aberta a trocar experiências sobre produto, growth e o que vem
-              depois.
+              E claro: parte importante da minha rotina é a{" "}
+              <span className="italic text-primary">Amora</span>, minha
+              cachorra e principal aluna nas minhas tentativas de ensinar
+              truques novos. Ela domina o básico, estamos evoluindo para o
+              avançado.
             </p>
           </div>
         </div>
@@ -184,7 +186,10 @@ function SobreMim() {
             Vamos <span className="italic text-primary">conversar?</span>
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-muted-foreground">
-            Se algo aqui ressoou com você, adoraria trocar uma ideia.
+            Hoje busco oportunidades em fintech ou SaaS em crescimento, onde eu
+            possa aprofundar expertise operacional, trabalhar perto de times de
+            produto e contribuir com estratégias que gerem impacto real. Se
+            quiser trocar uma ideia, pode me chamar.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <a
