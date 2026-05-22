@@ -240,15 +240,7 @@ function Resume() {
       </section>
 
       {/* SKILLS */}
-      <section
-        className="border-y border-border"
-        style={{
-          backgroundColor: "#ffffff",
-          backgroundImage:
-            "radial-gradient(circle, rgba(0,0,0,0.18) 1px, transparent 1px)",
-          backgroundSize: "44px 44px",
-        }}
-      >
+      <section className="border-y border-border bg-background">
         <div className="mx-auto max-w-6xl px-6 py-20">
           <h2 className="mb-10 font-serif text-3xl tracking-tight md:text-4xl">
             Principais competências
