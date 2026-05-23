@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import adillaPhoto from "@/assets/adilla.png";
 import { Mail, Linkedin, MapPin, ArrowUpRight, Sparkles, ArrowRight } from "lucide-react";
 import { Noise } from "@/components/Noise";
+import { motion } from "framer-motion";
 
 export const Route = createFileRoute("/")({
   component: Resume,
@@ -30,10 +31,10 @@ const experiences = [
     company: "Grupo Boticário",
     period: "07/2022 — 11/2025",
     bullets: [
-      "Liderei o go-to-market de uma iniciativa digital dentro do ecossistema Fortnite, estruturando posicionamento, narrativa e aquisição — resultado 3x superior ao benchmark interno.",
+      "Liderei o go-to-market de uma initiative digital dentro do ecossistema Fortnite, estruturando posicionamento, narrativa e aquisição — resultado 3x superior ao benchmark interno.",
       "Estruturei a comunicação e proposta de valor do produto, garantindo consistência entre experiência, campanha e objetivos de negócio.",
       "Direcionei decisões com base em métricas de aquisição, engajamento e conversão, otimizando eficiência de mídia e impacto.",
-      "Atuei como elo entre Produto, Martech e parceiros, garantindo execução alinhada à estratégia de crescimento.",
+      "Atueias como elo entre Produto, Martech e parceiros, garantindo execução alinhada à estratégia de crescimento.",
     ],
   },
   {
@@ -97,6 +98,19 @@ const highlights = [
   { value: "B2B + B2C", label: "estratégias de GTM end-to-end" },
 ];
 
+const fadeInUp = {
+  initial: { opacity: 0, y: 30 },
+  animate: { opacity: 1, y: 0 },
+};
+
+const staggerContainer = {
+  animate: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
 function Resume() {
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -111,24 +125,46 @@ function Resume() {
           <Noise patternRefreshInterval={2} patternAlpha={18} />
         </div>
 
-        <div className="relative z-10 mx-auto grid max-w-6xl gap-12 px-6 py-16 md:grid-cols-[1.2fr_1fr] md:py-24">
+        <motion.div
+          initial="initial"
+          animate="animate"
+          variants={staggerContainer}
+          className="relative z-10 mx-auto grid max-w-6xl gap-12 px-6 py-16 md:grid-cols-[1.2fr_1fr] md:py-24"
+        >
           <div className="flex flex-col justify-center">
-            <h1 className="font-serif text-5xl leading-[1.05] tracking-tight md:text-7xl">
+            <motion.h1
+              variants={fadeInUp}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="font-serif text-5xl leading-[1.05] tracking-tight md:text-7xl"
+            >
               Adilla
               <br />
               <span className="italic text-primary">Teixeira</span>
-            </h1>
-            <span className="mt-5 inline-flex w-fit items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs uppercase tracking-[0.18em] text-muted-foreground">
+            </motion.h1>
+
+            <motion.span
+              variants={fadeInUp}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="mt-5 inline-flex w-fit items-center gap-2 rounded-full border border-border bg-background px-3 py-1 text-xs uppercase tracking-[0.18em] text-muted-foreground"
+            >
               <Sparkles className="h-3.5 w-3.5 text-primary" />
               Product · Growth · Go-to-Market
-            </span>
+            </motion.span>
 
-            <p className="mt-6 max-w-xl text-lg text-muted-foreground">
-              Pode me chamar de Adi. Atuo conectando estratégia, produto e
-              comunicação para transformar comportamento de usuário em
-              crescimento real para negócios digitais.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <motion.p
+              variants={fadeInUp}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="mt-6 max-w-xl text-lg text-muted-foreground"
+            >
+              Conecto estratégia, produto e comunicação para transformar
+              complexidade em algo que as pessoas conseguem usar de verdade.
+            </motion.p>
+
+            <motion.div
+              variants={fadeInUp}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="mt-8 flex flex-wrap gap-3"
+            >
               <a
                 href="mailto:adillayukie@hotmail.com"
                 className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition hover:opacity-90"
@@ -139,25 +175,39 @@ function Resume() {
                 href="https://www.linkedin.com/in/adillayukie"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-3 text-sm font-medium text-foreground transition hover:bg-secondary"
+                className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-5 py-3 text-sm font-medium text-foreground transition hover:bg-secondary"
               >
                 <Linkedin className="h-4 w-4" /> LinkedIn
                 <ArrowUpRight className="h-4 w-4" />
               </a>
               <Link
                 to="/sobre"
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-3 text-sm font-medium text-foreground transition hover:bg-secondary"
+                className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-5 py-3 text-sm font-medium text-foreground transition hover:bg-secondary"
               >
                 Sobre mim <ArrowRight className="h-4 w-4" />
               </Link>
-            </div>
-            <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
-              <li className="inline-flex items-center gap-2"><Mail className="h-4 w-4 text-primary" /> adillayukie@hotmail.com</li>
-              <li className="inline-flex items-center gap-2"><MapPin className="h-4 w-4 text-primary" /> São Paulo, SP</li>
-            </ul>
+            </motion.div>
+
+            <motion.ul
+              variants={fadeInUp}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground"
+            >
+              <li className="inline-flex items-center gap-2">
+                <Mail className="h-4 w-4 text-primary" /> adillayukie@hotmail.com
+              </li>
+              <li className="inline-flex items-center gap-2">
+                <MapPin className="h-4 w-4 text-primary" /> São Paulo, SP
+              </li>
+            </motion.ul>
           </div>
 
-          <div className="relative mx-auto flex items-end justify-center md:mx-0">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            className="relative mx-auto flex items-end justify-center md:mx-0"
+          >
             <div
               className="relative aspect-square w-[320px] rounded-full md:w-[420px]"
               style={{
@@ -192,28 +242,42 @@ function Resume() {
                     "linear-gradient(to bottom, black 0%, black 21.8%, transparent 21.8%)",
                 }}
               />
-
             </div>
-          </div>
-
-
-        </div>
+          </motion.div>
+        </motion.div>
       </header>
 
       {/* HIGHLIGHTS */}
       <section className="border-b border-border bg-card">
-        <div id="big-numbers" className="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-6 py-10 md:grid-cols-4">
+        <motion.div
+          id="big-numbers"
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={staggerContainer}
+          className="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-6 py-10 md:grid-cols-4"
+        >
           {highlights.map((h) => (
-            <div key={h.label}>
+            <motion.div
+              key={h.label}
+              variants={fadeInUp}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+            >
               <div className="font-serif text-4xl text-primary">{h.value}</div>
               <p className="mt-2 text-sm leading-snug text-muted-foreground">{h.label}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </section>
 
       {/* ABOUT */}
-      <section className="mx-auto max-w-6xl px-6 py-20">
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="mx-auto max-w-6xl px-6 py-20"
+      >
         <div className="grid gap-12 md:grid-cols-[1fr_2fr]">
           <h2 className="font-serif text-3xl tracking-tight md:text-4xl">
             Resumo <span className="italic text-primary">profissional</span>
@@ -237,36 +301,60 @@ function Resume() {
             </Link>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* SKILLS */}
-      <section className="border-y border-border bg-background">
+      <section className="border-y border-border bg-card">
         <div className="mx-auto max-w-6xl px-6 py-20">
-          <h2 className="mb-10 font-serif text-3xl tracking-tight md:text-4xl">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="mb-10 font-serif text-3xl tracking-tight md:text-4xl"
+          >
             Principais competências
-          </h2>
-          <div className="flex flex-wrap gap-3">
+          </motion.h2>
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+            className="flex flex-wrap gap-3"
+          >
             {skills.map((s) => (
-              <span
+              <motion.span
                 key={s}
-                className="rounded-full border border-border bg-card px-4 py-2 text-sm text-foreground"
+                variants={fadeInUp}
+                transition={{ duration: 0.4, ease: "easeOut" }}
+                className="rounded-full border border-border bg-background px-4 py-2 text-sm text-foreground"
               >
                 {s}
-              </span>
+              </motion.span>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* EXPERIENCE */}
       <section className="mx-auto max-w-6xl px-6 py-20">
-        <h2 className="mb-12 font-serif text-3xl tracking-tight md:text-4xl">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="mb-12 font-serif text-3xl tracking-tight md:text-4xl"
+        >
           Experiência
-        </h2>
+        </motion.h2>
         <div className="space-y-10">
-          {experiences.map((e) => (
-            <article
+          {experiences.map((e, index) => (
+            <motion.article
               key={e.role + e.company}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.7, ease: "easeOut", delay: index * 0.05 }}
               className="grid gap-6 border-t border-border pt-10 md:grid-cols-[1fr_2fr]"
             >
               <div>
@@ -284,15 +372,21 @@ function Resume() {
                   </li>
                 ))}
               </ul>
-            </article>
+            </motion.article>
           ))}
         </div>
       </section>
 
       {/* EDUCATION + LANG + CERTS */}
       <section className="border-t border-border bg-card">
-        <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-3">
-          <div>
+        <motion.div
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={staggerContainer}
+          className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-3"
+        >
+          <motion.div variants={fadeInUp} transition={{ duration: 0.6, ease: "easeOut" }}>
             <h3 className="mb-5 font-serif text-2xl">Formação</h3>
             <ul className="space-y-4 text-sm text-foreground/85">
               <li>
@@ -304,23 +398,26 @@ function Resume() {
                 <p className="text-muted-foreground">PUC-PR · 2012–2016</p>
               </li>
             </ul>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div variants={fadeInUp} transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}>
             <h3 className="mb-5 font-serif text-2xl">Idiomas</h3>
             <ul className="space-y-2 text-sm text-foreground/85">
               <li>Português — Nativo</li>
               <li>Inglês — Profissional</li>
             </ul>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div variants={fadeInUp} transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}>
             <h3 className="mb-5 font-serif text-2xl">Certificações</h3>
             <ul className="space-y-2 text-sm text-foreground/85">
-              <li>Adobe Illustrator</li>
-              <li>Adobe InDesign</li>
+              <li>Product Management - PM3</li>
+              <li>CUSTOMER EXPERIENCE - Sandbox</li>
+              <li>Inbound Certified - HubSpot Academy</li>
+              <li>Marketing de Conteúdo - Ion Interactive</li>
+              <li>Especialista em Gestão de Redes Sociais - Ion Interactive</li>
               <li>Certificação Runrun.it</li>
             </ul>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
 
       {/* CTA */}
@@ -333,7 +430,13 @@ function Resume() {
               "linear-gradient(135deg, var(--mint), color-mix(in oklab, var(--coral) 30%, white))",
           }}
         />
-        <div className="mx-auto max-w-4xl px-6 py-24 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="mx-auto max-w-4xl px-6 py-24 text-center"
+        >
           <h2 className="font-serif text-4xl tracking-tight md:text-5xl">
             Vamos construir o próximo
             <span className="italic text-primary"> capítulo de growth?</span>
@@ -348,7 +451,7 @@ function Resume() {
           >
             <Mail className="h-4 w-4" /> adillayukie@hotmail.com
           </a>
-        </div>
+        </motion.div>
       </section>
 
       <footer className="border-t border-border py-8 text-center text-xs text-muted-foreground">
