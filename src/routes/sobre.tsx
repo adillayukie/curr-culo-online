@@ -9,6 +9,7 @@ import {
   Wind,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import { Noise } from "@/components/Noise";
 
 export const Route = createFileRoute("/sobre")({
   component: SobreMim,
