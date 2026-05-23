@@ -73,14 +73,14 @@ function SobreMim() {
     <div className="min-h-screen bg-background text-foreground">
       {/* HERO */}
       <header className="relative overflow-hidden border-b border-border">
+        <div aria-hidden className="absolute inset-0 bg-background" />
         <div
           aria-hidden
-          className="absolute inset-0 -z-10"
-          style={{
-            background:
-              "radial-gradient(50% 60% at 20% 10%, var(--mint) 0%, transparent 60%), radial-gradient(40% 40% at 90% 80%, color-mix(in oklab, var(--coral) 25%, transparent) 0%, transparent 70%)",
-          }}
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_560px_at_50%_200px,#fdba74,transparent)]"
         />
+        <div aria-hidden className="pointer-events-none absolute inset-0">
+          <Noise patternRefreshInterval={2} patternAlpha={18} />
+        </div>
         <motion.div
           initial="initial"
           animate="animate"
