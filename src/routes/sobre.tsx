@@ -109,29 +109,29 @@ function SobreMim() {
           </motion.div>
           
           <div className="order-1 flex flex-col justify-center md:order-2">
-            <motion.span
-              variants={fadeInUp}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              className="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-border bg-card/70 px-3 py-1 text-xs uppercase tracking-[0.18em] text-muted-foreground backdrop-blur"
-            >
-              Sobre mim
-            </motion.span>
-            
             <motion.h1
               variants={fadeInUp}
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="font-serif text-5xl leading-[1.05] tracking-tight md:text-6xl"
             >
               Prazer, sou <span className="italic text-primary">Adi</span>
-              <span className="mt-3 block font-sans text-lg font-normal not-italic tracking-normal text-muted-foreground md:text-xl">
+              <span className="mt-3 block font-sans text-2xl font-normal not-italic tracking-normal text-muted-foreground md:text-3xl">
                 e sim, pode me chamar assim mesmo. :)
               </span>
             </motion.h1>
-            
+
+            <motion.span
+              variants={fadeInUp}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="mt-8 mb-3 inline-flex w-fit items-center gap-2 rounded-full border border-border bg-card/70 px-3 py-1 text-xs uppercase tracking-[0.18em] text-muted-foreground backdrop-blur"
+            >
+              Sobre mim
+            </motion.span>
+
             <motion.p
               variants={fadeInUp}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="mt-6 text-lg text-muted-foreground"
+              className="text-lg text-muted-foreground"
             >
               Minha trajetória sempre misturou comunicação, tecnologia e
               criatividade. Tudo começou quando, aos 14 anos, aprendi HTML, CSS
