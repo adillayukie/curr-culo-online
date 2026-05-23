@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import adillaPhoto from "@/assets/adilla.jpeg";
+import adillaPhoto from "@/assets/adilla.png";
 import {
   Mail,
   ArrowRight,
