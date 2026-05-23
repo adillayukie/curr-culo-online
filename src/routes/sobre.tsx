@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import adillaPhoto from "@/assets/adilla.jpeg";
+import adillaPhoto from "@/assets/adilla.png";
 import {
   Mail,
   ArrowRight,
@@ -91,21 +91,43 @@ function SobreMim() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="relative order-2 mx-auto md:order-1 md:mx-0"
+            className="order-2 mx-auto md:order-1 md:mx-0"
           >
             <div
-              aria-hidden
-              className="absolute inset-0 -z-10 rounded-full"
+              className="relative aspect-square w-[320px] rounded-full md:w-[420px]"
               style={{
                 background:
-                  "radial-gradient(closest-side, color-mix(in oklab, var(--coral) 35%, white) 0%, transparent 70%)",
+                  "linear-gradient(110deg, #9fb393 0%, #c8dcb8 50%, #DFFFD6 100%)",
               }}
-            />
-            <img
-              src={adillaPhoto}
-              alt="Retrato de Adilla Teixeira"
-              className="relative h-[420px] w-auto object-contain"
-            />
+            >
+              <div
+                aria-hidden
+                className="absolute inset-0 rounded-full"
+                style={{
+                  background:
+                    "radial-gradient(55% 50% at 72% 78%, rgba(255,255,255,0.5) 0%, transparent 70%)",
+                }}
+              />
+              <div className="absolute inset-0 overflow-hidden rounded-full">
+                <img
+                  src={adillaPhoto}
+                  alt=""
+                  aria-hidden
+                  className="absolute bottom-0 left-1/2 h-[112%] w-auto max-w-none -translate-x-1/2 object-contain"
+                />
+              </div>
+              <img
+                src={adillaPhoto}
+                alt="Retrato de Adilla Teixeira"
+                className="absolute bottom-0 left-1/2 h-[112%] w-auto max-w-none -translate-x-1/2 object-contain"
+                style={{
+                  WebkitMaskImage:
+                    "linear-gradient(to bottom, black 0%, black 21.8%, transparent 21.8%)",
+                  maskImage:
+                    "linear-gradient(to bottom, black 0%, black 21.8%, transparent 21.8%)",
+                }}
+              />
+            </div>
           </motion.div>
           
           <div className="order-1 flex flex-col justify-center md:order-2">
