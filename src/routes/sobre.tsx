@@ -136,9 +136,9 @@ function SobreMim() {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="font-serif text-5xl leading-[1.05] tracking-tight md:text-6xl"
             >
-              Prazer, sou <span className="italic text-primary">Adi</span>
+              Prazer, sou <span className="italic text-primary">Adilla</span>
               <span className="mt-3 block font-sans text-2xl font-normal not-italic tracking-normal text-muted-foreground md:text-3xl">
-                e sim, pode me chamar assim mesmo. :)
+                mas, pode me chamar de Adi. :)
               </span>
             </motion.h1>
 
