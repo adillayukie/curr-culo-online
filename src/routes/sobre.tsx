@@ -85,7 +85,7 @@ function SobreMim() {
           initial="initial"
           animate="animate"
           variants={staggerContainer}
-          className="mx-auto grid max-w-6xl gap-12 px-6 py-16 md:grid-cols-[1fr_1.2fr] md:py-24"
+          className="relative z-10 mx-auto grid max-w-6xl gap-12 px-6 py-16 md:grid-cols-[1fr_1.2fr] md:py-24"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
