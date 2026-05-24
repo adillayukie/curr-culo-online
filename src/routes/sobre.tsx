@@ -199,7 +199,7 @@ function SobreMim() {
 
       {/* WAYS OF WORKING */}
       <section className="border-y border-border bg-secondary/40">
-        <div className="mx-auto max-w-6xl px-6 py-20">
+        <div className="mx-auto max-w-6xl px-6 py-20 bg-[#e0f0e1]">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
