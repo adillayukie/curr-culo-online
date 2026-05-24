@@ -70,10 +70,15 @@ const staggerContainer = {
 
 function SobreMim() {
   return (
-    <div className="relative min-h-screen bg-background text-foreground">
-      <div aria-hidden className="pointer-events-none fixed inset-0 z-0">
-        <Noise patternRefreshInterval={2} patternAlpha={18} />
-      </div>
+    <div
+      className="relative min-h-screen text-foreground"
+      style={{
+        backgroundColor: "#f5f0e8",
+        backgroundImage:
+          "radial-gradient(circle, rgba(0,0,0,0.18) 1px, transparent 1px)",
+        backgroundSize: "18px 18px",
+      }}
+    >
       <div className="relative z-10">
       {/* HERO */}
       <header className="relative overflow-hidden border-b border-border">
