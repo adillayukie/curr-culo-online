@@ -41,7 +41,7 @@ const ways = [
   {
     icon: Sparkles,
     title: "Aprendo rápido temas novos",
-    text: "Because começo com curiosidade, não com medo.",
+    text: "Porque começo com curiosidade, não com medo.",
   },
   {
     icon: Layers,
