@@ -1,11 +1,22 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { FileText, User } from "lucide-react";
+import { Download, FileText, User } from "lucide-react";
 
-const items = [
-  { to: "/" as const, icon: FileText, label: "Currículo" },
-  { to: "/sobre" as const, icon: User, label: "Sobre mim" },
+type NavItem =
+  | { type: "route"; to: "/" | "/sobre"; icon: typeof FileText; label: string }
+  | { type: "download"; href: string; icon: typeof FileText; label: string; filename: string };
+
+const items: NavItem[] = [
+  { type: "route", to: "/", icon: FileText, label: "Currículo" },
+  { type: "route", to: "/sobre", icon: User, label: "Sobre mim" },
+  {
+    type: "download",
+    href: "/Adilla_Yukie_Teixeira.pdf",
+    filename: "Adilla_Yukie_Teixeira.pdf",
+    icon: Download,
+    label: "Baixar currículo",
+  },
 ];
 
 export function SiteNav() {
@@ -14,7 +25,11 @@ export function SiteNav() {
   const activeIndex = Math.max(
     0,
     items.findIndex((i) =>
-      i.to === "/" ? location.pathname === "/" : location.pathname.startsWith(i.to),
+      i.type === "route"
+        ? i.to === "/"
+          ? location.pathname === "/"
+          : location.pathname.startsWith(i.to)
+        : false,
     ),
   );
 
@@ -37,7 +52,7 @@ export function SiteNav() {
   }, [activeIndex]);
 
   return (
-    <nav className="fixed top-4 left-1/2 z-50 w-full max-w-sm -translate-x-1/2 px-3">
+    <nav className="fixed top-4 left-1/2 z-50 w-full max-w-md -translate-x-1/2 px-3">
       <div
         ref={containerRef}
         className="relative flex items-center justify-between rounded-full border border-border bg-card/90 px-1 py-2 shadow-xl backdrop-blur"
@@ -45,13 +60,25 @@ export function SiteNav() {
         {items.map((item, index) => {
           const Icon = item.icon;
           const isActive = index === activeIndex;
+          const handleClick = () => {
+            if (item.type === "route") {
+              navigate({ to: item.to });
+            } else {
+              const a = document.createElement("a");
+              a.href = item.href;
+              a.download = item.filename;
+              document.body.appendChild(a);
+              a.click();
+              a.remove();
+            }
+          };
           return (
             <button
-              key={item.to}
+              key={item.label}
               ref={(el) => {
                 btnRefs.current[index] = el;
               }}
-              onClick={() => navigate({ to: item.to })}
+              onClick={handleClick}
               className={`relative z-10 flex flex-1 flex-col items-center justify-center px-3 py-2 text-sm font-medium transition-colors ${
                 isActive ? "text-primary" : "text-muted-foreground hover:text-foreground"
               }`}
