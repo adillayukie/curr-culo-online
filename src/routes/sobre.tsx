@@ -70,7 +70,11 @@ const staggerContainer = {
 
 function SobreMim() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="relative min-h-screen bg-background text-foreground">
+      <div aria-hidden className="pointer-events-none fixed inset-0 z-0">
+        <Noise patternRefreshInterval={2} patternAlpha={18} />
+      </div>
+      <div className="relative z-10">
       {/* HERO */}
       <header className="relative overflow-hidden border-b border-border">
         <div aria-hidden className="absolute inset-0 bg-background" />
@@ -308,6 +312,7 @@ function SobreMim() {
       <footer className="border-t border-border py-8 text-center text-xs text-muted-foreground">
         © {new Date().getFullYear()} Adilla Teixeira
       </footer>
+      </div>
     </div>
   );
 }
