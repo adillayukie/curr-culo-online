@@ -291,7 +291,7 @@ function SobreMim() {
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <a
               href="mailto:adillayukie@hotmail.com"
-              className="inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition hover:opacity-90"
+              className="inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition hover:opacity-90 bg-[#f16d55]"
             >
               <Mail className="h-4 w-4" /> adillayukie@hotmail.com
             </a>
