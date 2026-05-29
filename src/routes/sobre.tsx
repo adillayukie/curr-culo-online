@@ -175,31 +175,33 @@ function SobreMim() {
       </header>
 
       {/* STORY */}
-      <motion.section
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="mx-auto max-w-3xl px-6 py-20"
-      >
-        <h2 className="mb-10 font-serif text-3xl tracking-tight md:text-4xl">
-          Formação & <span className="italic text-primary">visão</span>
-        </h2>
-        <div className="space-y-6 text-lg leading-relaxed text-foreground/85">
-          <p>
-            Sou formada em Design Digital (PUC-PR), tenho background técnico em
-            Informática e MBA em Marketing (ESPM). Mas o que mais gosto nessa
-            combinação é a capacidade de conectar esses mundos: vejo produto
-            como design, tecnologia como ferramenta de estratégia, e
-            comunicação como a ponte entre o que é complexo e o que faz sentido
-            para as pessoas.
-          </p>
-        </div>
-      </motion.section>
+      <section className="bg-[#f5f0e8] border-b border-border">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="mx-auto max-w-3xl px-6 py-20"
+        >
+          <h2 className="mb-10 font-serif text-3xl tracking-tight md:text-4xl">
+            Formação & <span className="italic text-primary">visão</span>
+          </h2>
+          <div className="space-y-6 text-lg leading-relaxed text-foreground/85">
+            <p>
+              Sou formada em Design Digital (PUC-PR), tenho background técnico em
+              Informática e MBA em Marketing (ESPM). Mas o que mais gosto nessa
+              combinação é a capacidade de conectar esses mundos: vejo produto
+              como design, tecnologia como ferramenta de estratégia, e
+              comunicação como a ponte entre o que é complexo e o que faz sentido
+              para as pessoas.
+            </p>
+          </div>
+        </motion.div>
+      </section>
 
       {/* WAYS OF WORKING */}
-      <section className="border-y border-border bg-secondary/40">
-        <div className="mx-auto max-w-6xl px-6 py-20 bg-[#e0f0e1]">
+      <section className="border-b border-border bg-card">
+        <div className="mx-auto max-w-6xl px-6 py-20 relative z-10">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -241,52 +243,54 @@ function SobreMim() {
       </section>
 
       {/* OFF DUTY */}
-      <motion.section
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="mx-auto max-w-6xl px-6 py-20"
-      >
-        <div className="grid gap-12 md:grid-cols-[1fr_2fr]">
-          <h2 className="font-serif text-3xl tracking-tight md:text-4xl">
-            Fora do <span className="italic text-primary">trabalho</span>
-          </h2>
-          <div className="space-y-5 text-lg leading-relaxed text-foreground/80">
-            <p>
-              Nasci em São Paulo, morei muitos anos em Curitiba, e hoje estou
-              de volta a SP. Quando não estou trabalhando, estou em galerias,
-              cinemas ou cafés. Gosto de conversar sobre design, arquitetura,
-              investimentos e produção audiovisual — acredito que tudo é
-              narrativa, e que boas narrativas movem mercados (e pessoas).
-            </p>
-            <p>
-              E claro: parte importante da minha rotina é a{" "}
-              <span className="italic text-primary">Amora</span>, minha
-              cachorra e principal aluna nas minhas tentativas de ensinar
-              truques novos. Ela domina o básico, estamos evoluindo para o
-              avançado.
-            </p>
+      <section className="bg-[#f5f0e8] border-b border-border">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="mx-auto max-w-6xl px-6 py-20"
+        >
+          <div className="grid gap-12 md:grid-cols-[1fr_2fr]">
+            <h2 className="font-serif text-3xl tracking-tight md:text-4xl">
+              Fora do <span className="italic text-primary">trabalho</span>
+            </h2>
+            <div className="space-y-5 text-lg leading-relaxed text-foreground/80">
+              <p>
+                Nasci em São Paulo, morei muitos anos em Curitiba, e hoje estou
+                de volta a SP. Quando não estou trabalhando, estou em galerias,
+                cinemas ou cafés. Gosto de conversar sobre design, arquitetura,
+                investimentos e produção audiovisual — acredito que tudo é
+                narrativa, e que boas narrativas movem mercados (e pessoas).
+              </p>
+              <p>
+                E claro: parte importante da minha rotina é a{" "}
+                <span className="italic text-primary">Amora</span>, minha
+                cachorra e principal aluna nas minhas tentativas de ensinar
+                truques novos. Ela domina o básico, estamos evoluindo para o
+                avançado.
+              </p>
+            </div>
           </div>
-        </div>
-      </motion.section>
+        </motion.div>
+      </section>
 
       {/* CTA */}
       <section className="relative overflow-hidden">
+        <div aria-hidden className="absolute inset-0 bg-background" />
         <div
           aria-hidden
-          className="absolute inset-0 -z-10"
-          style={{
-            background:
-              "linear-gradient(135deg, var(--mint), color-mix(in oklab, var(--coral) 30%, white))",
-          }}
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_560px_at_50%_200px,#fdba74,transparent)]"
         />
+        <div aria-hidden className="pointer-events-none absolute inset-0">
+          <Noise patternRefreshInterval={2} patternAlpha={18} />
+        </div>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="mx-auto max-w-4xl px-6 py-24 text-center"
+          className="relative z-10 mx-auto max-w-4xl px-6 py-24 text-center"
         >
           <h2 className="font-serif text-4xl tracking-tight md:text-5xl">
             Vamos <span className="italic text-primary">conversar?</span>

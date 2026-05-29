@@ -422,27 +422,26 @@ function Resume() {
 
       {/* CTA */}
       <section className="relative overflow-hidden">
+        <div aria-hidden className="absolute inset-0 bg-background" />
         <div
           aria-hidden
-          className="absolute inset-0 -z-10"
-          style={{
-            background:
-              "linear-gradient(135deg, var(--mint), color-mix(in oklab, var(--coral) 30%, white))",
-          }}
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_560px_at_50%_200px,#fdba74,transparent)]"
         />
+        <div aria-hidden className="pointer-events-none absolute inset-0">
+          <Noise patternRefreshInterval={2} patternAlpha={18} />
+        </div>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="mx-auto max-w-4xl px-6 py-24 text-center"
+          className="relative z-10 mx-auto max-w-4xl px-6 py-24 text-center"
         >
           <h2 className="font-serif text-4xl tracking-tight md:text-5xl">
-            Vamos construir o próximo
-            <span className="italic text-primary"> capítulo de growth?</span>
+            Vamos <span className="italic text-primary">conversar?</span>
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-muted-foreground">
-            Aberta para conversas sobre Product Management, GTM e estratégias de
+            Aberta para conversas sobre Product Marketing Manager, GTM e estratégias de
             crescimento.
           </p>
           <a
